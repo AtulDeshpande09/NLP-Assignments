@@ -132,9 +132,9 @@ class LDA:
 
     def show_topics(self):
             
-        for topic in self.show_table:
-            print("Topic \n : ")
-            print(self.show_table[topic])
+        for i,topic in enumerate(self.show_table):
+            print(f"Topic {i+1}\n : ")
+            print(sorted(self.show_table[topic],reverse=True))
             print("\n")
             print("------------+------------")
             
@@ -145,7 +145,6 @@ class LDA:
         text = """
         lda.model_topic() --> takes one parameter epoches , works even left blank.
         lda.show_topic() ---> Shows probability of a word with respect to topic .
-                                  Note : It does not give sorted probabilities!!!
 
         How to use :
 
@@ -164,5 +163,20 @@ class LDA:
         """
         print(text)
             
+
+
+
+if __name__ == '__main__':
             
-            
+    no_topics = 2
+    #tokenized data
+    corpus = [
+            ["apple", "banana", "apple", "fruit", "fruit", "banana"],
+            ["dog", "cat", "dog", "animal", "pet", "cat"],
+            ["banana", "fruit", "apple", "orange", "fruit", "banana"]
+            ]
+
+    lda = LDA(no_topics=no_topics , corpus=corpus)
+    lda.model_topics()
+    lda.show_topics()
+
