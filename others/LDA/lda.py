@@ -124,17 +124,18 @@ class LDA:
 
     def create_prob_table(self):
         new_table = {f"topic{i}" : [0]*len(self.vocab) for i in range(self.no_topics)}
+	
         for i , word in enumerate(self.probability_table):
             for j , prob in enumerate(self.probability_table[word]):
-                    new_table[f"topic{j}"][i] = f"{prob}*{word}"
+                    new_table[f"topic{j}"][i] = f"{prob:.5f}*{word}"
 
         self.show_table = new_table
 
-    def show_topics(self):
+    def show_topics(self,top_ten=True):
             
         for i,topic in enumerate(self.show_table):
             print(f"Topic {i+1}\n : ")
-            print(sorted(self.show_table[topic],reverse=True))
+            print(sorted(self.show_table[topic][:10],reverse=True)) if (top_ten == True) else print(sorted(self.show_table[topic],reverse=True))
             print("\n")
             print("------------+------------")
             
