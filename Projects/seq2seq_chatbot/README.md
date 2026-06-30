@@ -1,7 +1,3 @@
-Sure! Here's a more visually impressive, polished, and well-structured version of your markdown with enhanced formatting, icons, and readability improvements:
-
----
-
 # 🌾 **AgriBot – Smart Farming Assistant**
 
 AgriBot is an **AI-powered chatbot** designed to help farmers with agricultural queries including crop management, fertilizers, soil health, and more. Built with a **Seq2Seq model enhanced by attention mechanism**, AgriBot offers natural, intuitive conversations for better farming decisions.
@@ -117,6 +113,3 @@ npm run dev
 - 🔐 Implement user authentication  
 - 📱 Improve responsive mobile design  
 
----
-
-Feel free to let me know if you want a GitHub-style README badge layout, contribution guidelines, or a prettier visual demo section!
